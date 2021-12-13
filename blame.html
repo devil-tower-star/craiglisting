@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>blame</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+html, body{
+  width: 100%;
+  height: 100%;
+  cursor: none;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+a { 
+}
+button{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  cursor: none;
+z-index:-4;
+
+height:300px;
+width:300px;
+}
+
+
+#fake-cursor{
+  width: 60px;
+  pointer-events: none;
+}
+
+#done{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+}
+a:link {
+  color: cornflowerblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color:chocolate;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: orange;
+}
+
+
+</style>
+<link rel="icon" href="blame.png">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+<img src ="blame2.gif" style="height:440px; position: absolute; top: 50%;left: 50%; transform: translate(-50%, -50%); z-index:-1;">
+
+
+<a style="bottom:0; position:absolute;margin-bottom:30px;margin-right:70px;right:0;font-size:20px;display: inline-block; z-index: 1;padding: 1em;" href="index.html">back</a>
+
+
+<button onclick="clicked()" id="call-to-action"></button>
+<div style="display: none" id="done"></div>
+
+<img id="fake-cursor" src="click.webp"/>
+
+
+<!-- partial -->
+
+  <script  src="./script.js"></script>
+
+</body>
+</html>

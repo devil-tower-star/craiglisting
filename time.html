@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>time time time</title>
+
+  <style type="text/css">
+    body{margin:0;
+overflow-x:hidden;
+overflow-y:hidden;}
+img{display:inline;}
+a:link {
+  color: DarkBlue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color:chocolate;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: orange;
+}
+
+  </style>
+
+</head>
+<link rel="icon" href="time.png">
+<body>
+<p></p>
+<img style="position:absolute;margin-top:-20px;height:790px;width:1400px;z-index:-1;"src ="lighthouse.gif">
+<img style="margin-top:px; margin-left:20px;height:400px;z-index:;"src ="tears.gif">
+<img style="position:absolute; height:400px; left:400px;"src ="time.gif">
+<img style="position:absolute; margin-left:150px;height:400px;z-index:;"src ="fight.gif">
+
+<img style="position:absolute; margin-left:200px;margin-top:260px;height:500px;z-index:;"src ="cuckoo.gif">
+
+<img style="position:absolute; margin-left:-400px;margin-top:250px;height:490px;width:500px;z-index:;"src ="stork.gif">
+<p style="position:absolute;left:560px;top:600px;font-size:20px;color:blue;">i'm at my <a href="favorite.html"><span>best</span></a> when it's <span id="datetime"></span></p>
+<a style="bottom:0; position:absolute;margin-bottom:30px;margin-right:100px;right:0;font-size:20px;" href="index.html">back</a>
+
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <title>fridge</title>
+<style>
+body{margin-left:50px;margin-top:30px;}
+a:link {
+  color: steelblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color:chocolate;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: orange;
+}
+
+.draggable {
+  position: absolute;
+  z-index: 9;
+  background-color: LightGray;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+padding-left:10px;
+padding-right:10px;
+padding-top:10px;
+width:150px;
+}
+
+.mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: DarkGray;
+  color: ;
+}
+</style>
+<body>
+<link rel="icon" href="mess.png">
+<div style="margin-left:-10px;">
+<p>i'll go through</p>
+<p>picking through this mess</p>
+<p>very</p>
+<p>(very)</p>
+<p>quietly</p>
+</div>
+<div style="cursor: move; left:1000px;top:50px;width:280px;padding:10px;" class="draggable">
+<img style="height:500px;" src="reach.png">
+</div>
+
+<div style="cursor:move; left:730px;top:490px;width:445px;padding:10px;" class="draggable">
+<img style="height:200px; top:443px; left:211px;"src="sigh.png">
+</div>
+<div style="top:370px;left:670px;"class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>i am <a href="religious.html">faithful</a> still</p>
+  <p></p>
+  <p></p>
+</div>
+<div style = "top:386px; left:849px;"class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>oh my god you are insufferable</p>
+  <p></p>
+  <p></p>
+</div>
+
+<div style = "top:44px; left:543px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>here's the problem with the holland tunnel:</p>
+  <p>if you accidentally go in, you're stuck driving all the way to new jersey</p>
+  <p></p>
+</div>
+<div style = "top:103px; left:134px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+<p></p>
+<li>milk</li>
+<li>cereal</li>
+<li>digiornos</li><p> </p>
+</div>
+<div style="left:380px;top:150px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>i'll go thru</p>
+  <p>picking thru this mess</p>
+  <p></p>
+</div>
+<div style="left:35px;top:260px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>i wish i took more pictures</p>
+  <p></p>
+  <p></p>
+</div>
+<div style="left:170px;top:320px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>we don't have anything at home</p>
+  <p>do you want to get takeout today?</p>
+  <p></p>
+</div>
+<div style="top:530px; left:30px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>and so i want you to know</p>
+  <p>i am not afraid of myself</p>
+  <p>or anyone else at all</p>
+</div>
+<div style = "top:220px; left:649px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>"even so, don't you care if you hurt yourself?"</p>
+  <p></p>
+  <p></p>
+</div>
+
+<div style="left:350px;top:30px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>"what will others think of you?"</p>
+  <p></p>
+  <p></p>
+</div>
+
+<div style="left:550px;top:620px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>i will remain <a href=religious.html>faithful</a></p>
+  <p></p>
+  <p></p>
+</div>
+
+<div style="left:400px;top:300px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>i let the storm settle</p>
+  <p>keep to myself</p>
+  <p></p>
+</div>
+<div style = "top:410px; left:500px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>the wall cracks</p>
+  <p>my anger rears its ugly head again</p>
+  <p></p>
+</div>
+<div style="left:395px;top:550px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>"it's not your fault",</p>
+  <p>you told me</p>
+  <p>"you couldn't have known"</p>
+</div>
+
+<div style="left:320px;top:460px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>and no one wants to pay the toll and time for that shit</p>
+</div>
+
+<div style="left:800px;top:30px;" class="draggable">
+  <div class="mydivheader">&#10006;</div>
+  <p>i didn't know you were allergic to citrus</p>
+  <p>until i came to your house</p>
+  <p>you offered to make smoothies, but ran out of other fruits</p>
+</div>
+
+
+<script>
+var draggableElements = document.getElementsByClassName("draggable");
+
+for(var i = 0; i < draggableElements.length; i++){
+    dragElement(draggableElements[i]);
+}
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+        elmnt.onmousedown = dragMouseDown;
+    }
+    function dragMouseDown(e) {
+        e = e || window.event;
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+        return false;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        pos1 = pos3 - parseInt(e.clientX);
+        pos2 = pos4 - parseInt(e.clientY);
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        console.log(elmnt.offsetTop)
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+</script>
+<a style="bottom:0; position:absolute;margin-bottom:50px;margin-right:100px;right:0;font-size:20px;" href="index.html">back</a>
+
+</body>
+</html>
